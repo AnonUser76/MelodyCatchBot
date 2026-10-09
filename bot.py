@@ -49,7 +49,7 @@ try:
     await tg_file.download_to_drive(audio_file)
 
     shazam = Shazam()
-    result = await shazam.recognize(audio_file)
+    result = await shazam.recognize_song(audio_file)
 
     track = result.get("track")
     if not track:
